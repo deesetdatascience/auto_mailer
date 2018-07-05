@@ -70,9 +70,13 @@ class EmailSender():
     def __init__(self, username=None, password=None):
         
         #self.gmail_user = username if username else input("Enter Gmail Username:")
-        self.gmail_user = f'{getpass.getuser()}@deeset.co.uk'
-        self.gmail_password = password if password else getpass.getpass(f"Enter Password for {getpass.getuser()}@deeset.co.uk: \n")
-        self.login()
+        self.gmail_user = None
+        
+    def get_creds(self):
+        if not self.gmail_user:
+            self.gmail_user = f'{getpass.getuser()}@deeset.co.uk'
+            self.gmail_password = password if password else getpass.getpass(f"Enter Password for {getpass.getuser()}@deeset.co.uk: \n")
+            self.login()
         
     def send_email(self,
                message_html='', 
@@ -145,6 +149,7 @@ class EmailSender():
         return response
     
     def _send(self, msg):
+        self.get_creds()
         if not self.check_logged_in():
             time.sleep(1)
             self.login()
