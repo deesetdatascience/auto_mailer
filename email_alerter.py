@@ -83,7 +83,7 @@ class EmailSender():
                bcc=[], 
                reciepts=[],
                attachments=[],
-               extra_headers={},
+               extra_headers={'Return-Path':'<>', 'Auto-Submitted':'auto-generated'},
               ):
         
         if to == [] and cc == [] and bcc == []:
