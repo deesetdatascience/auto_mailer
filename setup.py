@@ -29,7 +29,7 @@ setup(
     # There are some restrictions on what makes a valid project name
     # specification here:
     # https://packaging.python.org/specifications/core-metadata/#name
-    name='email_alerter',  # Required
+    name='auto_mailer',  # Required
 
     # Versions should comply with PEP 440:
     # https://www.python.org/dev/peps/pep-0440/
@@ -70,7 +70,7 @@ setup(
     #
     # This field corresponds to the "Home-Page" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#home-page-optional
-    url='http://s-fen-tfs01.deeset.ltd:8080/tfs/DefaultCollection/DataScience/_git/email_alerter',  # Optional
+    url='http://s-fen-tfs01.deeset.ltd:8080/tfs/DefaultCollection/DataScience/_git/auto_mailer',  # Optional
 
     # This should be your name or the name of the organization which owns the
     # project.
@@ -106,7 +106,7 @@ setup(
     # project page. What does your project relate to?
     #
     # Note that this is a string of words separated by whitespace, not a list.
-    keywords='stmp email alert send bulk',  # Optional
+    keywords='stmp email alert auto send bulk',  # Optional
 
     # You can just specify package directories manually here if your project is
     # simple. Or you can use find_packages().
@@ -115,7 +115,7 @@ setup(
     # the `py_modules` argument instead as follows, which will expect a file
     # called `my_module.py` to exist:
     #
-    py_modules=["email_alerter"],
+    py_modules=["auto_mailer"],
     #
     #packages=find_packages(exclude=['contrib', 'docs', 'tests']),  # Required
 
