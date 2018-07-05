@@ -1,8 +1,5 @@
-# DSCPM specific
-
 __pycache__/
 .ipynb_checkpoints/
-dscpm-testing.ipynb
 
 ## Github Python project defaults
 
