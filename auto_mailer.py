@@ -73,7 +73,7 @@ class EmailSender():
     def get_creds(self):
         if not self.gmail_user:
             self.gmail_user = f'{getpass.getuser()}@deeset.co.uk'
-            self.gmail_password = password if password else getpass.getpass(f"Enter Password for {getpass.getuser()}@deeset.co.uk: \n")
+            self.gmail_password = self.password if self.password else getpass.getpass(f"Enter Password for {getpass.getuser()}@deeset.co.uk: \n")
             self.login()
         
     def send_email(self,
