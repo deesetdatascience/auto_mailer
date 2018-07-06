@@ -38,10 +38,6 @@ class MLStripper(HTMLParser):
         self.feed(html)
         return self.get_data()
 
-# Fucntion to get "Nth of April" style dates
-def pretty_date(date):
-    return date.strftime('%A, %d{} %B %Y'.format('trnshddt'[0xc0006c000000006c>>2*date.day&3::4]))
-
 def run_from_ipython():
     try:
         __IPYTHON__
@@ -69,6 +65,8 @@ class EmailSender():
 
     def __init__(self, username=None, password=None):
         
+        self.username = username
+        self.password = password
         #self.gmail_user = username if username else input("Enter Gmail Username:")
         self.gmail_user = None
         
