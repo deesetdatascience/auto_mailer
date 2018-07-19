@@ -67,14 +67,15 @@ class EmailSender():
         
         self.username = username
         self.password = password
+        
         #self.gmail_user = username if username else input("Enter Gmail Username:")
         self.gmail_user = None
+        self.gmail_password = None
         
     def get_creds(self):
         if not self.gmail_user:
-            self.gmail_user = self.username if self.useranme else f'{getpass.getuser()}@deeset.co.uk'
+            self.gmail_user = self.username if self.username else f'{getpass.getuser()}@deeset.co.uk'
             self.gmail_password = self.password if self.password else getpass.getpass(f"Enter Password for {getpass.getuser()}@deeset.co.uk: \n")
-            self.login()
         
     def send_email(self,
                message_html='', 
@@ -161,6 +162,7 @@ class EmailSender():
             self._send(msg)
     
     def login(self):
+        self.get_creds()
         self.server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
         self.server.ehlo_or_helo_if_needed()
         try:
