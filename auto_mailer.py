@@ -4,6 +4,7 @@ Created on Fri Apr  6 12:54:23 2018
 
 @author: Josiah Outram Halstead
 @author: Marc.Matterson
+@author: Chris.Taaffe
 
 """
 
